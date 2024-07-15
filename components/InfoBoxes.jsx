@@ -24,21 +24,16 @@ function InfoBoxes() {
             <InfoBox
               bgColor="bg-blue-100"
               heading="For Property Owners"
-              buttonInfo={{}}
+              buttonInfo={{
+                btnLink: "/properties/add",
+                textColor: "text-white",
+                btnColor: "bg-blue-500",
+                btnText: " Add Property",
+              }}
             >
               List your properties and reach potential tenants. Rent as an
               airbnb or long term.
             </InfoBox>
-            <div className="bg-blue-100 p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold">For Property Owners</h2>
-              <p className="mt-2 mb-4"></p>
-              <Link
-                href="/properties/add"
-                className="inline-block bg-blue-500 text-white rounded-lg px-4 py-2 hover:bg-blue-600"
-              >
-                Add Property
-              </Link>
-            </div>
           </div>
         </div>
       </section>
