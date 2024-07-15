@@ -1,0 +1,4 @@
+#    to randomize fetched
+const recentProperties = properties
+.sort(() => Math.random - Math.random)
+.slice(0, 3);
