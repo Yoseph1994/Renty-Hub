@@ -4,9 +4,16 @@ import ProprtyCard from "./ProprtyCard";
 import Link from "next/link";
 
 function HomeProperties() {
-  const recentProperties = properties
-    .sort(() => Math.random - Math.random)
-    .slice(0, 3);
+  const shuffleAndSelectFirstThree = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array.slice(0, 3);
+  };
+
+  const recentProperties = shuffleAndSelectFirstThree(properties);
+
   return (
     <>
       <section className="px-4 py-6">
