@@ -1,8 +1,12 @@
 import connectDB from "@/config/DbConfig";
+import Property from "@/models/Property";
 
+//GET /api/properties
 export async function GET(request) {
   try {
-    return new Response(JSON.stringify({ message: "Hello there" }), {
+    await connectDB();
+    const properties = await Property.find({});
+    return new Response(JSON.stringify(properties), {
       status: 200,
     });
   } catch (error) {

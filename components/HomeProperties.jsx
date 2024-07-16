@@ -1,9 +1,10 @@
 import React from "react";
-import properties from "@/DB/properties.json";
 import ProprtyCard from "./ProprtyCard";
 import Link from "next/link";
+import { fetchProperties } from "@/utils/requests";
 
-function HomeProperties() {
+async function HomeProperties() {
+  const properties = await fetchProperties();
   const shuffleAndSelectFirstThree = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
