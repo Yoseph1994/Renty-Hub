@@ -56,3 +56,9 @@ const { id } = useParams();
     };
     if (property === null) fetchData();
   }, [property, id]);
+
+
+# image tips in nextjs
+sizes="100vw"
+height={0}
+width={0}
